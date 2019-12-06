@@ -1,0 +1,21 @@
+html
+    head
+        title= title
+    body
+        h1= message
+
+        form(method='POST' action='/shorten')
+            div.form-group
+                h2 Shorten your url:
+                input(type="text", placeholder="url to shorten" name="urlShorten"
+                style="border: none; border-bottom: 2px solid red; width: 50%; height: 07%;margin:auto")
+                button.btn.btn-primary(type='submit') Shorten!!
+        
+        table(style="border: 3px solid black;")
+            tr
+                th(style="border: 1px solid black;") Original Url
+                th(style="border: 1px solid black;") Short Url
+            each val in urlList
+                tr
+                    td(style="border: 1px solid black;")= val.urlOriginal
+                    td= val.urlBase62

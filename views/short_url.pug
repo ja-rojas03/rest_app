@@ -1,0 +1,12 @@
+html
+    head
+        title Shortened URL
+    body
+        h1 Shortened Url Preview 
+        img(src=`data:image/png;base64,${image}` alt="Base64 Image" style="width: 200px; heigth: 200px")
+        h2 Original Url:
+        h3= short.urlOriginal
+        h2 Url acortada: 
+        h3= short.urlBase62
+        h2 Creation Date: 
+        h3= short.creationDate
